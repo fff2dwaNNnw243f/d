@@ -38,10 +38,6 @@ game.StarterGui:SetCore("SendNotification",{
     Text = "new fe script : Fe pp with cum"
 })
 
-game.StarterGui:SetCore("SendNotification",{
-    Title = "zoro_yt";
-    Text = "عندي فضيحه zoro_yt الي يبيها يجي دس"
-})
 
 _G.dont = false
 local UI = GUI:CreateWindow("shrmuta hub","UI made by dream0_7")
