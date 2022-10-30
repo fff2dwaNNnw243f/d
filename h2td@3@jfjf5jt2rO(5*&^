@@ -723,13 +723,13 @@ LP:addLabel("Local","aka localplayer")
 
 -- Slider
 
-LP:addSlider("WalkSpeed",5,999,function(value)
+LP:addSlider("WalkSpeed",16,500,function(value)
     game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = value
 end)
 
 -- slider
 
-LP:addSlider("Jump Power / 50 is default",50,5000,function(value)
+LP:addSlider("Jump Power / 50 is default",50,1000,function(value)
     game.Players.LocalPlayer.Character.Humanoid.JumpPower = value
 end)
 local flyjump
