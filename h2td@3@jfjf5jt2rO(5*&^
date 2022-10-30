@@ -35,12 +35,12 @@ game.StarterGui:SetCore("SendNotification",{
 wait(5)
 game.StarterGui:SetCore("SendNotification",{
     Title = "good new's";
-    Text = "new antibang script in misc"
+    Text = "new antibang in misc"
 })
 wait(2)
 game.StarterGui:SetCore("SendNotification",{
     Title = "announcements";
-    Text = "most of the script will not work we will fix that very soon"
+    Text = "most of the script's is not working we will fix that very soon"
 })
 _G.dont = false
 local UI = GUI:CreateWindow("shrmuta hub","UI made by dream0_7")
@@ -775,6 +775,7 @@ end)
 
 
 -- [ Fe Script's ]
+fescripts:addLabel("ANNOUNCEMENTS", "most of the script's is not working we will fix that very soon" )
 
 fescripts:addLabel("if you crashed just reset?", "or rejoin in the misc tab" )
 
