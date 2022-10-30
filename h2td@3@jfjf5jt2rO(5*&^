@@ -35,7 +35,7 @@ game.StarterGui:SetCore("SendNotification",{
 wait(5)
 game.StarterGui:SetCore("SendNotification",{
     Title = "good new's";
-    Text = "new antibang in misc"
+    Text = "new antibang script in misc"
 })
 wait(2)
 game.StarterGui:SetCore("SendNotification",{
