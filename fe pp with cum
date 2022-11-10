@@ -1,0 +1,225 @@
+        local args = {
+            [1] = ";char me mkrm5002 "
+        }
+
+        game:GetService("ReplicatedStorage").HDAdminClient.Signals.RequestCommand:InvokeServer(unpack(args))
+        wait(0.5)
+        local args1 = {
+        [1] = ";hat me 5674297809 "
+        }
+
+        game:GetService("ReplicatedStorage").HDAdminClient.Signals.RequestCommand:InvokeServer(unpack(args1))
+        wait(1)
+        local args2 = {
+            [1] = ";hat me 5674299814 "
+        }
+
+        game:GetService("ReplicatedStorage").HDAdminClient.Signals.RequestCommand:InvokeServer(unpack(args2))
+        wait(1)
+        local args3 = {
+            [1] = ";hat me 7738000857 "
+        }
+
+        game:GetService("ReplicatedStorage").HDAdminClient.Signals.RequestCommand:InvokeServer(unpack(args3))
+        wait(1)
+        local args4 = {
+            [1] = ";hat me 7617073931 "
+        }
+
+        game:GetService("ReplicatedStorage").HDAdminClient.Signals.RequestCommand:InvokeServer(unpack(args4))
+        wait(1)
+        local args5 = {
+            [1] = ";hat me 17614451 "
+        }
+        game:GetService("ReplicatedStorage").HDAdminClient.Signals.RequestCommand:InvokeServer(unpack(args5))
+        wait(1)
+        local args6 = {
+            [1] = ";hat me 4466083777 "
+        }
+        game:GetService("ReplicatedStorage").HDAdminClient.Signals.RequestCommand:InvokeServer(unpack(args6))
+    wait(0.5)
+    game.Players.LocalPlayer.Character["MeshPartAccessory"].Name = "Bob11"
+    game.Players.LocalPlayer.Character["MeshPartAccessory"].Name = "Bob22"
+    game.Players.LocalPlayer.Character["MeshPartAccessory"].Name = "Bob33"
+
+    local tog = true
+    local jit = Vector3.new(30,0,0)
+    local Player = game:GetService("Players").LocalPlayer
+    local Character = Player.Character
+
+    game.RunService.Heartbeat:Connect(function()
+    Character.tallhead_nAccessory.Handle.Velocity = jit
+    Character.tallheadAccessory.Handle.Velocity = jit
+    Character.Mushroom.Handle.Velocity = jit
+    Character.Bob11.Handle.Velocity = jit
+    Character.Bob22.Handle.Velocity = jit
+    Character.Bob33.Handle.Velocity = jit
+    end)
+
+    local GR = Instance.new("Model",Character)
+    Character.Model.Name = "Hand"
+
+    local hh = Character.Hand
+    local pr = Instance.new("Part",hh)
+    local pr = Instance.new("Part",hh)
+    local pr = Instance.new("Part",hh)
+    local pr = Instance.new("Part",hh)
+    local pr = Instance.new("Part",hh)
+    local pr = Instance.new("Part",hh)
+
+    hh:FindFirstChild("Part").Name = "pr1"
+    hh:FindFirstChild("Part").Name = "pr2"
+    hh:FindFirstChild("Part").Name = "pr3"
+    hh:FindFirstChild("Part").Name = "pr4"
+    hh:FindFirstChild("Part").Name = "pr5"
+    hh:FindFirstChild("Part").Name = "pr6"
+
+    hh.pr1.Size = Vector3.new(5,3,1)
+    hh.pr2.Size = Vector3.new(1,1,2)
+    hh.pr3.Size = Vector3.new(1,1,2)
+    hh.pr4.Size = Vector3.new(1,1,2)
+    hh.pr5.Size = Vector3.new(1,1,2)
+    hh.pr6.Size = Vector3.new(1,1,2)
+
+    for i,v in pairs (Character.Hand:GetChildren()) do
+        if v:IsA("Part") then
+            v.CanCollide = false
+            v.Transparency = 1
+            v.CFrame = Character.HumanoidRootPart.CFrame
+        end
+    end
+
+    local Hats = {palm   = Character:WaitForChild("tallhead_nAccessory"),
+                point1   = Character:WaitForChild("tallheadAccessory"),
+                point2   = Character:WaitForChild("Mushroom"),
+                middle1   = Character:WaitForChild("Bob11"),
+                middle2   = Character:WaitForChild("Bob22"),
+                ring1   = Character:WaitForChild("Bob33"),
+    }
+
+    for i,v in next, Hats do
+    v.Handle.AccessoryWeld:Remove()
+    end
+
+    local function align(i,v)
+    local att0 = Instance.new("Attachment", i)
+    att0.Position = Vector3.new(0,0,0)
+    local att1 = Instance.new("Attachment", v)
+    att1.Position = Vector3.new(0,0,0)
+    local AP = Instance.new("AlignPosition", i)
+    AP.Attachment0 = att0
+    AP.Attachment1 = att1
+    AP.RigidityEnabled = false
+    AP.ReactionForceEnabled = false
+    AP.ApplyAtCenterOfMass = true
+    AP.MaxForce = 9999999
+    AP.MaxVelocity = math.huge
+    AP.Responsiveness = 65
+    local AO = Instance.new("AlignOrientation", i)
+    AO.Attachment0 = att0
+    AO.Attachment1 = att1
+    AO.ReactionTorqueEnabled = false
+    AO.PrimaryAxisOnly = false
+    AO.MaxTorque = 9999999
+    AO.MaxAngularVelocity = math.huge
+    AO.Responsiveness = 50
+    end
+    align(Hats.palm.Handle,hh.pr1)
+    align(Hats.point1.Handle,hh.pr2)
+    align(Hats.point2.Handle,hh.pr3)
+    align(Hats.middle1.Handle,hh.pr4)
+    align(Hats.middle2.Handle,hh.pr5)
+    align(Hats.ring1.Handle,hh.pr6)
+    hh.pr1.Attachment.Name = "a1"
+    hh.pr2.Attachment.Name = "a2"
+    hh.pr3.Attachment.Name = "a3"
+    hh.pr4.Attachment.Name = "a4"
+    hh.pr5.Attachment.Name = "a5"
+    hh.pr6.Attachment.Name = "a6"
+
+    align(hh.pr1, Character["HumanoidRootPart"])
+    align(hh.pr2, Character["HumanoidRootPart"])
+    align(hh.pr3, Character["HumanoidRootPart"])
+    align(hh.pr4, Character["HumanoidRootPart"])
+    align(hh.pr5, Character["HumanoidRootPart"])
+    align(hh.pr6, Character["HumanoidRootPart"])
+
+    hh.pr1.Attachment.Rotation = Vector3.new(270, 0, 0)
+    hh.pr2.Attachment.Rotation = Vector3.new(270,0,0)
+    hh.pr3.Attachment.Rotation = Vector3.new(90,0,0)
+    hh.pr4.Attachment.Rotation = Vector3.new(0,150,0)
+    hh.pr5.Attachment.Rotation = Vector3.new(0,-150,0)
+    hh.pr6.Attachment.Rotation = Vector3.new(0,0,0)
+
+    Character:WaitForChild("HumanoidRootPart"):FindFirstChild("Attachment").Name = "Attachment1"
+    Character:WaitForChild("HumanoidRootPart"):FindFirstChild("Attachment").Name = "Attachment2"
+    Character:WaitForChild("HumanoidRootPart"):FindFirstChild("Attachment").Name = "Attachment3"
+    Character:WaitForChild("HumanoidRootPart"):FindFirstChild("Attachment").Name = "Attachment4"
+    Character:WaitForChild("HumanoidRootPart"):FindFirstChild("Attachment").Name = "Attachment5"
+    Character:WaitForChild("HumanoidRootPart"):FindFirstChild("Attachment").Name = "Attachment6"
+
+    Character:WaitForChild("HumanoidRootPart").Attachment1.Position = Vector3.new(-0.025, -1.098, -1.880)
+    Character:WaitForChild("HumanoidRootPart").Attachment2.Position = Vector3.new(-0.025, -1.098, -4.300)
+    Character:WaitForChild("HumanoidRootPart").Attachment3.Position = Vector3.new(-0.025, -1.098, -5.999)
+    Character:WaitForChild("HumanoidRootPart").Attachment4.Position = Vector3.new(-0.700, -1.700, -1.000)
+    Character:WaitForChild("HumanoidRootPart").Attachment5.Position = Vector3.new(0.700, -1.700, -1.000)
+    Character:WaitForChild("HumanoidRootPart").Attachment6.Position = Vector3.new(-0.025, -1.098, -5.999)
+
+    game.Players.LocalPlayer:GetMouse().KeyDown:Connect(function(KeyPressed)
+    if KeyPressed == "e" then
+        if toggle == false then
+            
+                    Character:WaitForChild("HumanoidRootPart").Attachment1.Position = Vector3.new(-0.025, -1.098, -1.880)
+                    Character:WaitForChild("HumanoidRootPart").Attachment2.Position = Vector3.new(-0.025, -1.098, -4.300)
+                    Character:WaitForChild("HumanoidRootPart").Attachment3.Position = Vector3.new(-0.025, -1.098, -5.999)
+                    Character:WaitForChild("HumanoidRootPart").Attachment4.Position = Vector3.new(-0.700, -1.700, -1.000)
+                    Character:WaitForChild("HumanoidRootPart").Attachment5.Position = Vector3.new(0.700, -1.700, -1.000)
+                    Character:WaitForChild("HumanoidRootPart").Attachment6.Position = Vector3.new(-0.025, -2.650, -6.999)
+            
+                    hh.pr1.Attachment.Rotation = Vector3.new(270, 0, 0)
+                    hh.pr2.Attachment.Rotation = Vector3.new(270,0,0)
+                    hh.pr3.Attachment.Rotation = Vector3.new(90,0,0)
+                    hh.pr4.Attachment.Rotation = Vector3.new(0,150,0)
+                    hh.pr5.Attachment.Rotation = Vector3.new(0,-150,0)
+                    hh.pr6.Attachment.Rotation = Vector3.new(0,0,0)
+            
+            toggle = true
+    else
+            
+            Character:WaitForChild("HumanoidRootPart").Attachment1.Position = Vector3.new(-0.025, -1.098, -1.880)
+                    Character:WaitForChild("HumanoidRootPart").Attachment2.Position = Vector3.new(-0.025, -1.098, -4.300)
+                    Character:WaitForChild("HumanoidRootPart").Attachment3.Position = Vector3.new(-0.025, -1.098, -5.999)
+                    Character:WaitForChild("HumanoidRootPart").Attachment4.Position = Vector3.new(-0.700, -1.700, -1.000)
+                    Character:WaitForChild("HumanoidRootPart").Attachment5.Position = Vector3.new(0.700, -1.700, -1.000)
+                    Character:WaitForChild("HumanoidRootPart").Attachment6.Position = Vector3.new(-0.025, -1.098, -5.999)
+            
+                    hh.pr1.Attachment.Rotation = Vector3.new(270, 0, 0)
+                    hh.pr2.Attachment.Rotation = Vector3.new(270,0,0)
+                    hh.pr3.Attachment.Rotation = Vector3.new(90,0,0)
+                    hh.pr4.Attachment.Rotation = Vector3.new(0,150,0)
+                    hh.pr5.Attachment.Rotation = Vector3.new(0,-150,0)
+                    hh.pr6.Attachment.Rotation = Vector3.new(0,0,0) 
+            
+                        toggle = false
+            end
+        end
+    end)
+
+    while true do 
+    Hats.palm.Handle.CFrame = hh.pr1.CFrame
+    Hats.point1.Handle.CFrame = hh.pr2.CFrame
+    Hats.point2.Handle.CFrame = hh.pr3.CFrame
+    Hats.middle1.Handle.CFrame = hh.pr4.CFrame
+    Hats.middle2.Handle.CFrame = hh.pr5.CFrame
+    Hats.ring1.Handle.CFrame = hh.pr6.CFrame
+    wait()
+    end
+
+    for i,v in next, game:GetService("Players").LocalPlayer.Character:GetDescendants() do
+    if v:IsA("BasePart") and v.Name ~="HumanoidRootPart" then 
+    game:GetService("RunService").Heartbeat:connect(function()
+    v.Velocity = Vector3.new(0,35,0)
+    wait(0.5)
+    end)
+    end
+    end
