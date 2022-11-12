@@ -1,11 +1,3 @@
-            local TiddieSpread = 0.4
-        local TiddieAngle = 10
-        local TiddieDensity = 0
-        local TiddieFriction = 0.4
-        local TiddieElasticity = 1
-        local TiddieFrictionWeight = 0
-        local TiddieElasticityWeight = 0
-        
     local Player = game.Players.LocalPlayer
     local Character = Player.Character
     local WowHats = {Character:WaitForChild("Space Cop"),Character:WaitForChild("SpaceHelmetB"),Character:WaitForChild("Pink Pom poms"),Character:WaitForChild("PinkHeartPurse")}
